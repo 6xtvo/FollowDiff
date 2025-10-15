@@ -53,7 +53,7 @@ function ZipForm({ children }: ZipFormProps) {
             let followersContent: string[] = [];
             let followingContent: string[] = [];
 
-            const extractUsernames = (htmlString: string): string[] => {
+            const extractFollowerUsernames = (htmlString: string): string[] => {
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(htmlString, "text/html");
             
@@ -66,15 +66,27 @@ function ZipForm({ children }: ZipFormProps) {
                 return usernames;
             };
 
+            const extractFollowingUsernames = (htmlString: string): string[] => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(htmlString, "text/html");
+            
+                const usernameElements = doc.querySelectorAll("h2");
+            
+                const usernames = Array.from(usernameElements)
+                    .map(el => el.textContent?.trim() || "")
+                    .filter(username => username.length > 0);
+            
+                return usernames;
+            };
+
             for (const fileName of filteredFiles) {
                 const file = zipData.files[fileName];
 
                 if (!file.dir && (fileName == `${folderName}/following.html` || fileName == `${folderName}/followers_1.html`)) {
-                    console.log("ye")
                     const content = await file.async("text");
 
-                    if (fileName == `${folderName}/followers_1.html`) followersContent = extractUsernames(content);
-                    else if (fileName == `${folderName}/following.html`) followingContent = extractUsernames(content);
+                    if (fileName == `${folderName}/followers_1.html`) followersContent = extractFollowerUsernames(content);
+                    else if (fileName == `${folderName}/following.html`) followingContent = extractFollowingUsernames(content);
                 }
             }
 
