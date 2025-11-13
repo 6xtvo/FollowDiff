@@ -7,8 +7,9 @@
   <h1>FollowDiff</h1>
 
 <img alt="Branch checks" src="https://img.shields.io/github/checks-status/6xtvo/FollowDiff/master?style=for-the-badge&labelColor=000000&color=d93275" />
+<a href="https://github.com/6xtvo/FollowDiff/deployments"><img alt="Deployment status" src="https://img.shields.io/github/deployments/6xtvo/FollowDiff/Production?style=for-the-badge&label=deployment&labelColor=000000&color=d93275"></a>
 <img alt="Last commit" src="https://img.shields.io/github/last-commit/6xtvo/FollowDiff?style=for-the-badge&labelColor=000000&color=d93275" />
-<a href="[https://github.com/vercel/next.js/blob/canary/license.md](https://github.com/6xtvo/FollowDiff/blob/master/LICENSE)"><img alt="License" src="https://img.shields.io/npm/l/next.svg?style=for-the-badge&color=d93275&labelColor=000000"></a>
+<a href="https://github.com/6xtvo/FollowDiff/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/npm/l/next.svg?style=for-the-badge&color=d93275&labelColor=000000"></a>
 
 </div>
 
