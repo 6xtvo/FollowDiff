@@ -51,8 +51,7 @@ export default function Home() {
                 <span>
                     Welcome to FollowDiff, a free tool that generates a list of
                     who doesn&apos;t follow back and who you don&apos;t follow
-                    back on Instagram. Upload your information zip file to get
-                    started.
+                    back on Instagram. Click the <strong>Help</strong> button to get started.
                 </span>
 
                 <div className="flex flex-row items-center gap-x-5">
@@ -169,7 +168,7 @@ export default function Home() {
                                                 </strong>{" "}
                                                 and select{" "}
                                                 <strong>JSON</strong>,{" "}
-                                                then press <strong>Save</strong>. If wanted, you can select the{" "}
+                                                then press <strong>Save</strong>. Be sure to also select {" "}<strong>All time</strong> for{" "}
                                                 <strong>Date range</strong> and then press{" "}
                                                 <strong>Save</strong>. Once done, press{" "}
                                                 <strong>Start export</strong>.

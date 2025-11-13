@@ -29,16 +29,16 @@ const ResultsPage = () => {
             return;
         } else if (storedFollowers && storedFollowing) {
             const followersList = JSON.parse(storedFollowers) as string[]; // They follow
-            setFollowers(followersList.sort((a, b) => a.localeCompare(b)));
+            setFollowers(followersList.filter(user => !user.includes("deleted")).sort((a, b) => a.localeCompare(b)));
             const followingList = JSON.parse(storedFollowing) as string[]; // You follow
-            setFollowing(followingList.sort((a, b) => a.localeCompare(b)));
+            setFollowing(followingList.filter(user => !user.includes("deleted")).sort((a, b) => a.localeCompare(b)));
 
             // Find users you follow, but they don't follow you back
-            const notFollowedBackList = followingList.filter(user => !followersList.includes(user)).sort((a, b) => a.localeCompare(b));
+            const notFollowedBackList = followingList.filter(user => !followersList.includes(user) && !user.includes("deleted")).sort((a, b) => a.localeCompare(b));
             setNotFollowedBack(notFollowedBackList);
 
             // Find users who follow you, but you don’t follow them back
-            const notFollowingBackList = followersList.filter(user => !followingList.includes(user)).sort((a, b) => a.localeCompare(b));
+            const notFollowingBackList = followersList.filter(user => !followingList.includes(user) && !user.includes("deleted")).sort((a, b) => a.localeCompare(b));
             setNotFollowingBack(notFollowingBackList);
         }
     }, [router]);
