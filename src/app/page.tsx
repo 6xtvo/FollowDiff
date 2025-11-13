@@ -96,6 +96,12 @@ export default function Home() {
                                     >
                                         Invalid ZIP provided.
                                     </span>
+                                    <span
+                                        className="text-red-500 text-xs text-center hidden"
+                                        id="nohtml-zip"
+                                    >
+                                        Please use JSON files in your zip.
+                                    </span>
                                 </div>
                                 <DialogFooter>
                                     <button
@@ -133,39 +139,40 @@ export default function Home() {
                                                 <strong>
                                                     <ExternalLink
                                                         url="https://accountscenter.instagram.com/info_and_permissions/dyi/"
-                                                        text="Download your information"
+                                                        text="Export your information"
                                                     />
                                                 </strong>
                                             </li>
                                             <li>
                                                 Press{" "}
                                                 <strong>
-                                                    Download or tranfer your
-                                                    information
+                                                    Create export
                                                 </strong>{" "}
                                                 {">"}{" "}
                                                 <strong>
-                                                    Some of your information
+                                                    Export to device
                                                 </strong>
                                             </li>
                                             <li>
-                                                Scroll down to{" "}
-                                                <strong>Connections</strong> and
-                                                select{" "}
+                                                Click on {" "}
+                                                <strong>Customize information</strong> and
+                                                unselect everything except{" "}
                                                 <strong>
                                                     Followers and following
-                                                </strong>{" "}
-                                                then press <strong>Next</strong>
+                                                </strong>,{" "}
+                                                then press <strong>Save</strong>
                                             </li>
                                             <li>
-                                                Press{" "}
+                                                Click on{" "}
                                                 <strong>
-                                                    Download to device
+                                                    Format
                                                 </strong>{" "}
-                                                and select your{" "}
-                                                <strong>Date range</strong>.
-                                                Once complete, press{" "}
-                                                <strong>Create files</strong>
+                                                and select{" "}
+                                                <strong>JSON</strong>,{" "}
+                                                then press <strong>Save</strong>. If wanted, you can select the{" "}
+                                                <strong>Date range</strong> and then press{" "}
+                                                <strong>Save</strong>. Once done, press{" "}
+                                                <strong>Start export</strong>.
                                             </li>
                                             <li>
                                                 Your information will take some
@@ -191,7 +198,7 @@ export default function Home() {
             <div className="absolute bottom-5 text-xs flex flex-row justify-center items-center gap-x-2">
                 <span>
                     Made with 🧠 by{" "}
-                    <ExternalLink url="https://github.com/xtncz" text="tncz" />
+                    <ExternalLink url="https://github.com/6xtvo" text="tncz" />
                 </span>
                 <span>|</span>
                 <span className="flex flex-row justify-center items-center gap-x-1">
