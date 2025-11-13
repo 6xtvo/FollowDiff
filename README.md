@@ -15,7 +15,7 @@
 
 ## About
 
-FollowDiff is a free tool that generates a list of who doesn't follow back and who you don't follow back on Instagram, made in TypeScript with [Next.js](https://nextjs.org/), [RadixUI](https://www.radix-ui.com/) and [JSZip](https://stuk.github.io/jszip/).
+FollowDiff is a free tool that generates a list of who doesn't follow back and who you don't follow back on Instagram, made in TypeScript with [Next.js](https://nextjs.org/), [MagicUI](https://magicui.design/) and [JSZip](https://stuk.github.io/jszip/).
 
 - Visit the [site](https://follow-diff.vercel.app/) to see how it works
 - Contributions are welcome
