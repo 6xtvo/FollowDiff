@@ -1,7 +1,7 @@
 <div align="center">
   <a href="https://follow-diff.vercel.app/">
     <picture>
-      <img alt="FollowDiff logo" src="" height="128">
+      <img alt="FollowDiff logo" src="./public/logo.svg" height="220" width="220">
     </picture>
   </a>
   <h1>FollowDiff</h1>
